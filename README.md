@@ -2,4 +2,4 @@
 
 This updates texlive and installs inkscape.
 
-See [git@github.com:adinriv/docker-texlive-ink.git] for the original texlive docker.
+See https://github.com/adinriv/docker-texlive for the original texlive docker.
