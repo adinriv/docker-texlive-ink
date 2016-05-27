@@ -6,7 +6,8 @@ MAINTAINER adin
 # git
 RUN apt-get update && apt-get install -y \
 inkscape \
-git
+git \
+gnuplot
 
 # Update all texlive
 RUN tlmgr update --all
