@@ -5,10 +5,14 @@ MAINTAINER adin
 # inkscape (needed for images)
 # git
 # gnuplot (for pgfplots advance settings)
-RUN apt-get update && apt-get install -y \
-inkscape \
-git \
-gnuplot
+RUN apt-get update -qq &&\
+    apt-get install -y \
+      inkscape \
+      git \
+      gnuplot \
+    &&\
 
-# Update all texlive
-RUN tlmgr update --all
+    apt-get autoclean autoremove &&\
+    rm -rf /var/lib/apt/lists/* \
+           /tmp/* \
+           /var/tmp/*
