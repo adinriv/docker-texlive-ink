@@ -2,14 +2,15 @@ FROM adnrv/texlive
 MAINTAINER adin
 
 # Install 
-# inkscape (needed for images)
-# git
-# gnuplot (for pgfplots advance settings)
 RUN apt-get update -qq &&\
-    apt-get install -y \
+    apt-get install --no-install-recommends -y \
+      # inkscape (needed for images)
       inkscape \
       git \
+      # gnuplot (for pgfplots advance settings)
       gnuplot \
+      # easy way to unzip (also one can tar)
+      unzip \
     &&\
 
     apt-get autoclean autoremove &&\
