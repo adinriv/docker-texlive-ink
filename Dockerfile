@@ -13,6 +13,7 @@ RUN apt-get update -qq &&\
       gnuplot \
       # easy way to unzip (also one can tar)
       unzip \
+      make \
     &&\
 
     apt-get autoclean autoremove &&\
